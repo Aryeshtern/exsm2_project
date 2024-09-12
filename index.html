@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header id="header">
+        <h3 id="header-text">BATTALION FORCE MANAGMENT</h3>
+    </header>
+    <hr>
+    <section id="section-1">
+        <div id="form-add-container">
+            <form id="add-form">
+                <input id="full-name-input" type="text" placeholder="Full Name" required>
+                <input id="rank-input" type="text" placeholder="Rank" required>
+                <input id="position-input" type="text" placeholder="Position" required>
+                <input id="platoon-input" type="text" placeholder="Platoon" required>
+                <input id="Mission-time-input" type="number" placeholder="Mission time (seconds)" required>
+                <select id="status" required>
+                    <option value="active">Active</option>
+                    <option value="reserve">Reserve</option>
+                    <option value="retired">Retired</option>
+                </select>
+                <button  type="submit">Add Personal</button>
+            </form>
+        </div>
+        <h3>FORCES ONERVIEW</h3>
+        <hr>
+        <table id="forces-table">
+            <thead>
+                <tr>
+                    <th><button id="sort-btn">ascend</button><button id="sort-reverse-btn">descend</button></th>
+                    <th>Rank</th>
+                    <th>Position</th>
+                    <th>Platoon</th>
+                    <th>Mission Time (seconds)</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="forces-tbody">
+                <!-- Forces will be dynamically added here -->
+            </tbody>
+        </table>
+    </section>
+    <section id="section-2">
+        <div id="form-edit-container" >
+            <form id="edit-form">
+                <input type="text" id="edit-full-name" placeholder="Full Name">
+                <input type="text" id="edit-rank" placeholder="Rank">
+                <input type="text" id="edit-position" placeholder="Position">
+                <input type="text" id="edit-platoon" placeholder="Platoon">
+                <select id="edit-status">
+                    <option value="active">Active</option>
+                    <option value="reserve">Reserve</option>
+                    <option value="retired">Retired</option>
+                </select>
+                <input type="text" id="edit-mission-time" placeholder="Mission time (seconds)">
+                <button id="btn-edit" type="submit">Save Changes</button>
+                <button id="cancel-edit-button">Cancel</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
